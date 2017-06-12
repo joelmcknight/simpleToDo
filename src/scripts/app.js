@@ -43,11 +43,11 @@ class App extends React.Component {
       return (
         <div>
         	<header>
-        		<h1>TODOS</h1>
+        		<h1>To Do App</h1>
         	</header>
         	<form onSubmit={this.addTodo}>
         		<input type="text" name="todo"  value={this.state.todo}  onChange={this.handleChange} />
-        		<button>Add ToDo</button>
+        		<button className="addButton">Add ToDo</button>
         	</form>
         	<ul>
         		{this.state.todos.map((todo,i) => {
@@ -61,7 +61,7 @@ class App extends React.Component {
 
 const TodoItem = (props) => {
 	return (
-	 <li>{props.data} <button onClick={() => props.remove(props.todoIndex)}>Remove</button></li>
+	 <li className="removeButton">{props.data} <button onClick={() => props.remove(props.todoIndex)}>Remove</button></li>
 	);
 };
 
