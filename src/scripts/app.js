@@ -61,7 +61,7 @@ class App extends React.Component {
 
 const TodoItem = (props) => {
 	return (
-	 <li>{props.data} <button onClick={() => props.remove(props.todoIndex)}>❌</button></li>
+	 <li>{props.data} <button onClick={() => props.remove(props.todoIndex)}>Remove</button></li>
 	);
 };
 
@@ -73,5 +73,49 @@ const TodoItem = (props) => {
 // 	}
 // };
 
+
+// ------------Getting the date for laterrrr-----------------//
+// const net = require('net');
+// var portNum =process.argv[2];
+// var currentDate;
+// var currentYear;
+// var currentMonth;
+// var currentDay;
+// var currentDatePrint
+//
+//
+//
+// var server = net.createServer(function listener(socket) {
+//
+// 	currentDate = new Date();
+// 	currentYear = currentDate.getFullYear().toString()
+// 	currentMonth = (currentDate.getMonth() +1).toString()
+// 	if (currentMonth.length <2) {
+// 		currentMonth  = 0+ currentMonth;
+// 	}
+//
+// 	currentDay = currentDate.getDate().toString()
+// 	if (currentDay.length <2) {
+// 		currentDay  = 0+ currentDay;
+// 	}
+//
+// 	currentHours = currentDate.getHours().toString()
+// 	currentMinutes = currentDate.getMinutes().toString()
+//
+//
+//
+// 	currentDatePrint = currentYear +"-"+ currentMonth +"-"+ currentDay +" "+ currentHours +":"+ currentMinutes + "\n";
+// 	socket.write(currentDatePrint)
+//
+//
+// 	socket.end()
+// 	socket.pipe(socket);
+// })
+//
+// server.listen(portNum, function() {
+// 	// console.log('listening')
+// });
+
+//  -------------------------------------------//
 
 ReactDOM.render(<App />, document.getElementById('app'));
